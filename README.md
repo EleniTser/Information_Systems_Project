@@ -27,6 +27,6 @@ Configuration files for both nodes of the Cassandra cluster, and respectively th
 - `cassandraQueries.py` : Python script that after connecting to our Cassandra cluster, runs the specified queries and returns us the corresponding metrics of the queries execution i.e. latency per query, total latency, throughput. 
 - `loadCSVWithdsbulk.py` : Python script that implements the data loading to our previously created tables (loading on Cassandra is implemented using the DSBulk load utility).
 - `pandasModifyCSVData.py` : Python script that modifies the dataset in order to remove from the rows the part before the `=` which corresponds to the same header for all. The output file is the one that we load to the database.
-- `getPrometheusMetrics.py` : Python script that runs the queries to Prometheus and gives us the corresponding metrics of the queries execution, same metrcis as in Cassandra.
+- `getPrometheusMetrics.py` : Python script that runs the queries to Prometheus and gives us the corresponding metrics of the queries execution, same metrics as in Cassandra.
   
 For the data loading in the Prometheus local db, we used Prometheus Pushgateway. Since our data were not real time, we pushed them in time intervals to Pushgateway so that the timestamps set by Prometheus "correspond" to the timestamps of the original data, and thus we we were able to achieve consistency in the results of the queries concerning time between the two databases.
