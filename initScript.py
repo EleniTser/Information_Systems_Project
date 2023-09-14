@@ -92,7 +92,7 @@ session.execute("""
     )
 """)
 
-session.execute("CREATE INDEX IF NOT EXISTS hostname_index ON mykeyspace.query_6_table(hostname)")
+session.execute("CREATE INDEX IF NOT EXISTS timestamp_index ON mykeyspace.query_6_table(timestamp)")
 
 session.execute("""
     CREATE TABLE IF NOT EXISTS mykeyspace.query_7_table (
